@@ -5,5 +5,5 @@ class Client < ApplicationRecord
     validates :doc, numericality: { only_integer: true }
     validates :nombre, :cel, :doc, presence: true
     validates :doc, uniqueness: true
-    belongs_to :books 
+    has_many :books 
 end
