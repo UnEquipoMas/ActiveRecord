@@ -22,4 +22,10 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  #Ejemplo de otros parametros usuales para la configuración de bases de datos
+  #Heroku sobreescribe estos parametros en producción por la suya propia
+  adapter: postgresql
+  user: rubyexample
+  password: rubyexample
+  database: db/production.postgresql
+  host: localhost
